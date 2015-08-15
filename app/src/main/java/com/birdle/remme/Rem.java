@@ -54,7 +54,6 @@ public class Rem {
 
 
     public static Rem find (long id, Context context){
-        //TODO: Find and return rem object by ID from DB
         SQLiteDatabase db = mDBHelper.getReadableDatabase();
 
         String TestColumns = remsContract.remSchema._ID + " = ?";
@@ -66,18 +65,18 @@ public class Rem {
         c.moveToFirst();
         return cursorToRem(c, context);
     }
-    public static ArrayList<Rem> all(){
+    public static Cursor all(Context context){
         //TODO: return Array of all rems from db
         SQLiteDatabase db = mDBHelper.getReadableDatabase();
         Cursor c = db.query(remsContract.remSchema.TABLE_NAME, remsContract.remSchema.COLUMN_NAMES, null, null, null, null, null);
-        return null;
+        Rem[] results = {};
+        return c;
     }
     public static ArrayList<Rem> all(Date d){
         //TODO: return list of all rems from given day
         return null;
     }
     public static String parseInput(String in, Context context){
-        //TODO: parse and return string
         Resources res = context.getResources();
 
         int parsedID = Integer.parseInt(in, 2);

@@ -11,7 +11,7 @@ public final class remsContract {
     public static abstract class remSchema implements BaseColumns {
         public static final String TABLE_NAME = "rems";
         public static final String COLUMN_NAME_REM_DATA= "data";
-        public static final String[] COLUMN_NAMES= {TABLE_NAME, COLUMN_NAME_REM_DATA};
+        public static final String[] COLUMN_NAMES= {_ID, COLUMN_NAME_REM_DATA};
 
     }
 }
