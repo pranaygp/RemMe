@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">RemMe</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+
+    <string-array name="words" >
+        <item name="0000">add</item>
+        <item name="0001">start</item>
+        <item name="0010">make</item>
+        <item name="0011">visit</item>
+        <item name="0100">send</item>
+        <item name="0101">clean</item>
+        <item name="0110">finish</item>
+        <item name="0111">remove</item>
+
+        <item name="1000">gf</item>
+        <item name="1001">party</item>
+        <item name="1010">people</item>
+        <item name="1011">me</item>
+        <item name="1100">class</item>
+        <item name="1101">laptop</item>
+        <item name="1110">work</item>
+        <item name="1111">professor</item>
+    </string-array>
+</resources>
