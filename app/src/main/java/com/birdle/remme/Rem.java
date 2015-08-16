@@ -6,6 +6,7 @@ import android.content.Context;
 import android.content.res.Resources;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+import android.util.Log;
 
 import java.util.ArrayList;
 import java.util.Date;
@@ -78,9 +79,11 @@ public class Rem {
     }
     public static String parseInput(String in, Context context){
         Resources res = context.getResources();
-
-        int parsedID = Integer.parseInt(in, 2);
-        String result = res.getStringArray(R.array.words)[parsedID];
+        String result = "";
+        for (int i = 0; i <in.length(); i+=4){
+            int parsedID = Integer.parseInt(in.substring(i, (i+4)), 2);
+            result += (res.getStringArray(R.array.words)[parsedID] + " ");
+        }
         return result;
     }
 }
